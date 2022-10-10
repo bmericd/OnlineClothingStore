@@ -1,0 +1,10 @@
+﻿@using OnlineClothingStore.Models.ViewModels
+@model IndexViewModel
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>PRODUCTS</p>
+
+    @Model.products.FirstOrDefault();
+</div>

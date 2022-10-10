@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+
+    
+
+    @if(@Model.indexViewModel != null){
+
+        <p> User Role: @Model.indexViewModel.userRoles.First()</p>
+
+        <table class="table table-bordered table-responsive table-hover">  
+    <tr>  
+        <th>Product Id </th>  
+        <th>Product Name </th>  
+        <th>Product Color </th>  
+    </tr>  
+    @foreach (var d in Model.indexViewModel.products)  
+    {  
+        <tr>  
+            <td>@d.Id</td>  
+            <td>@d.Name</td>  
+            <td>@d.Color</td>  
+        </tr>  
+    }  
+</table>  
+    }
+    
+</div>
